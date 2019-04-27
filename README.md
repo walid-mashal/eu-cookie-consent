@@ -2,6 +2,8 @@
 
 # Cookie Consent bottom overlay for the EU Cookie Law in less than 60 lines of code
 
+###### This Package uses Bootstrap 4, JQuery and Cookie libraries to provide a basic Cookie consent functionality for the European Union (EU) Cookie Law to the user using the following steps:
+
   - import Bootstrap, JQuery and Cookie.js
        ``` <!-- Latest compiled and minified CSS -->
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
