@@ -25,7 +25,8 @@
         </div>
       ```
   - Add the following javascript to your js code
-    ```  $(document).ready(
+    ```
+       $(document).ready(
             $("#acceptcookies").click(function(e){
                 $("#cookiealert").hide();
                 // Dont forget to change sitename to something else.
@@ -37,7 +38,7 @@
                 $("#cookiealert").show();
             }
         }); ```
-  - And finally add the following CSS code to your.
+  - And finally add the following CSS code to your CSS File.
       ``` 
             .acceptcookie{
                 background-color:blue;
@@ -46,7 +47,6 @@
                 color:white;
                 font-size:14px;
             }
-        
       ```
 
-Don't forget to provide a different name to the cookie instead of `sitename-cookies-consent-cookie` to avoid conflict with other website cookies.
+Note: Don't forget to provide a different name to the cookie instead of `sitename-cookies-consent-cookie` to avoid conflict with other website cookies.
