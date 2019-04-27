@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="utf-8"/>
+        <title>Cookie Consent Sample</title>
+
+        <style>
+            .acceptcookie{
+                background-color:blue;
+            }
+            .privacy-link{
+                color:white;
+                font-size:14px;
+            }
+        </style>
+    </head>
+
+    <body style="padding-top:0px !important;">
+        <div class="alert alert-dismissible text-center cookiealert" style="font-size:14px;display:none;position:fixed;width:100%;background-color:cornflowerblue;z-index:10000;color:white;bottom:0px !important;" id="cookiealert" role="alert">
+            <div class="cookiealert-container">
+                We use cookies for traffic analysis, Ads and to provide better user experience.
+                <button type="button" class="btn btn-primary btn-sm acceptcookies" id="acceptcookies" aria-label="Close">
+                    OK
+                </button>
+                Learn more about our <a href="/privacy" class="privacy-link" target="_blank">Privacy Policy</a>
+            </div>
+        </div>
+    </body>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Library to set handle the cookie-->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            $("#acceptcookies").click(function(e){
+                $("#cookiealert").hide();
+                // Dont forget to change sitename to something else.
+                Cookies.set("sitename-cookies-consent-cookie", true, { expires: 365 });
+            });
+        
+            // Dont forget to change sitename to something else.
+            if(Cookies.get("sitename-cookies-consent-cookie") == undefined){
+                $("#cookiealert").show();
+            }
+        });
+    </script>
+</html>
